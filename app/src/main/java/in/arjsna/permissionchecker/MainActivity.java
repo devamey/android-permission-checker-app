@@ -1,21 +1,21 @@
 package in.arjsna.permissionchecker;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.MenuItem;
 import com.github.fernandodev.easyratingdialog.library.EasyRatingDialog;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
-import dagger.android.support.HasSupportFragmentInjector;
+import dagger.android.HasAndroidInjector;
 import in.arjsna.permissionchecker.basemvp.BaseActivity;
 import in.arjsna.permissionchecker.permissiongrouplist.PermissionListFragment;
 import javax.inject.Inject;
 
-public class MainActivity extends BaseActivity implements HasSupportFragmentInjector {
+public class MainActivity extends BaseActivity implements HasAndroidInjector {
 
   private EasyRatingDialog ratingDialog;
 
-  @Inject DispatchingAndroidInjector<Fragment> androidInjector;
+  @Inject DispatchingAndroidInjector<Object> androidInjector;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -49,7 +49,13 @@ public class MainActivity extends BaseActivity implements HasSupportFragmentInje
     }
   }
 
-  @Override public AndroidInjector<Fragment> supportFragmentInjector() {
-    return androidInjector;
-  }
+    @Override
+    public AndroidInjector<Object> androidInjector() {
+        return androidInjector;
+    }
+
+//  @Override public AndroidInjector<Fragment> supportFragmentInjector() {
+//    return androidInjector;
+//  }
+
 }

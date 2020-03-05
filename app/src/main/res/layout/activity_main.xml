@@ -7,14 +7,14 @@
     android:orientation="vertical"
     tools:context="in.arjsna.permissionchecker.MainActivity"
     >
-  <android.support.design.widget.AppBarLayout
+  <com.google.android.material.appbar.AppBarLayout
       xmlns:android="http://schemas.android.com/apk/res/android"
       android:id="@+id/toolbar_layout"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       >
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -29,8 +29,8 @@
           android:text="Permission List"
           android:textSize="18.0sp"
           />
-    </android.support.v7.widget.Toolbar>
-  </android.support.design.widget.AppBarLayout>
+    </androidx.appcompat.widget.Toolbar>
+  </com.google.android.material.appbar.AppBarLayout>
   <FrameLayout
       android:id="@+id/permission_container"
       android:layout_width="match_parent"

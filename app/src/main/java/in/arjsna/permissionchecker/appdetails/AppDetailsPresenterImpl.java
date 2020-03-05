@@ -2,7 +2,7 @@ package in.arjsna.permissionchecker.appdetails;
 
 import android.content.Context;
 import android.os.Environment;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import in.arjsna.permissionchecker.basemvp.BasePresenter;
 import in.arjsna.permissionchecker.datamanager.DataProvider;
 import in.arjsna.permissionchecker.di.qualifiers.ActivityContext;

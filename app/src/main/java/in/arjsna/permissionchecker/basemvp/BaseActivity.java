@@ -1,8 +1,8 @@
 package in.arjsna.permissionchecker.basemvp;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import dagger.android.AndroidInjection;
 
 public abstract class BaseActivity extends AppCompatActivity implements IMVPView {
